@@ -36,11 +36,11 @@ export default function Form() {
     const toastId = toast.loading("Sending Your Message,Please Wait...");
     emailjs
       .send(
-        `${process.env.SERVICE_ID}`,
-        `${process.env.TEMPLATE_ID}`,
+        `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
         params,
         {
-          publicKey: `${process.env.PUBLIC_KEY}`,
+          publicKey: `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`,
           limitRate: {
             throttle: 5000,
           },
